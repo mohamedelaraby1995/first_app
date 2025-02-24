@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/constants.dart';
-import 'package:flutter_app/views/widgets/hero_widget.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.title});
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         child: Column(
           children: [
-            HeroWidget(),
+            Lottie.asset('assets/lotties/anime2.json'),
             Container(
               color: Colors.cyan,
               width: double.infinity,

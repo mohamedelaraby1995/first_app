@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/constants.dart';
 import 'package:flutter_app/views/widget_tree.dart';
-import 'package:flutter_app/views/widgets/hero_widget.dart';
+import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -13,10 +14,8 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HeroWidget(),
-            SizedBox(
-              height: 100.0,
-            ),
+            Lottie.asset('assets/lotties/anime.json'),
+            kTextStyle.boxBetween,
             FilledButton(
               onPressed: () {
                 Navigator.pushReplacement(
