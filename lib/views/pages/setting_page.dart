@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/constants.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key, required this.title});
@@ -151,30 +152,19 @@ class _SettingPageState extends State<SettingPage> {
                 ),
                 child: Text(' Open Alert Dailog'),
               ),
-              SizedBox(
-                height: 50.0,
+              kTextStyle.boxBetween,
+              Divider(
+                color: Colors.teal,
+                thickness: 2.0,
+                endIndent: 250.0,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Sign in'),
-              ),
-              FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: Colors.blue,
+              Container(
+                height: 100.0,
+                child: VerticalDivider(
+                  color: Colors.teal,
+                  thickness: 100.0,
                 ),
-                onPressed: () {},
-                child: Text('Sign in'),
               ),
-              TextButton(
-                onPressed: () {},
-                child: Text('Sign in'),
-              ),
-              OutlinedButton(
-                onPressed: () {},
-                child: Text('Sign in'),
-              ),
-              CloseButton(),
-              BackButton(),
             ],
           ),
         ),
