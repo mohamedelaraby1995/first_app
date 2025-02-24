@@ -37,6 +37,14 @@ class _SettingPageState extends State<SettingPage> {
         child: Center(
           child: Column(
             children: [
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  foregroundColor: Colors.white,
+                ),
+                child: Text('sign in'),
+              ),
               DropdownButton(
                 value: menuItem,
                 items: [
@@ -70,12 +78,81 @@ class _SettingPageState extends State<SettingPage> {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(seconds: 5),
+                      behavior: SnackBarBehavior.floating,
+                      dismissDirection: DismissDirection.up,
+                      content: Text('Snackbaar'),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,
                   foregroundColor: Colors.white,
                 ),
-                child: Text('sign in'),
+                child: Text(' Open SnackBar'),
+              ),
+              SizedBox(
+                height: 50.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AboutDialog(
+                        applicationIcon:
+                            Icon(Icons.energy_savings_leaf_outlined),
+                        applicationName: 'Solarity',
+                        applicationVersion: '1.0.0',
+                        children: [
+                          Text('Welcome from Solarity'),
+                        ],
+                      );
+                    },
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  foregroundColor: Colors.white,
+                ),
+                child: Text(' Open Dialog'),
+              ),
+              SizedBox(
+                height: 50.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('Welcome to solarity'),
+                        content: Text('This is an energy appliction'),
+                        icon: Icon(Icons.energy_savings_leaf_outlined),
+                        iconColor: Colors.teal,
+                        actions: [
+                          FilledButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text('Close'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  foregroundColor: Colors.white,
+                ),
+                child: Text(' Open Alert Dailog'),
+              ),
+              SizedBox(
+                height: 50.0,
               ),
               ElevatedButton(
                 onPressed: () {},

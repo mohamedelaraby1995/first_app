@@ -11,11 +11,11 @@ class HeroWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(25.0),
         child: Container(
           width: double.infinity,
-          height: 200.0,
-          color: Colors.teal,
+          height: 300.0,
           child: Image.asset(
-            'assets/images/bg.jpg',
+            'assets/images/bigsur.jpg',
             fit: BoxFit.cover,
+            colorBlendMode: BlendMode.darken,
           ),
         ),
       ),
